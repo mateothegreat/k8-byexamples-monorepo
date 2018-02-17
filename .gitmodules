@@ -1,0 +1,8 @@
+[submodule "modules/.make"]
+	path = modules/.make
+	url = git@github.com:mateothegreat/.make.git
+	branch = master
+[submodule "modules/mysql"]
+	path = modules/mysql
+	url = git@github.com:mateothegreat/k8-byexamples-mysql
+	branch = master
