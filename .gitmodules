@@ -62,3 +62,19 @@
 	path = modules/k8-byexamples-fluentd-collector
 	url = git@github.com:mateothegreat/k8-byexamples-fluentd-collector
 	branch = master
+[submodule "modules/k8-byexamples-haproxy"]
+	path = modules/k8-byexamples-haproxy
+	url = git@github.com:mateothegreat/k8-byexamples-haproxy
+	branch = master
+[submodule "modules/k8-byexamples-ingress-controller"]
+	path = modules/k8-byexamples-ingress-controller
+	url = git@github.com:mateothegreat/k8-byexamples-ingress-controller
+	branch = master
+[submodule "applications/platform-ui"]
+	path = applications/platform-ui
+	url = git@gitlab.com:streaming-platform/applications/platform-ui.git
+	branch = master
+[submodule "docker/docker-alpine-htpasswd"]
+	path = docker/docker-alpine-htpasswd
+	url = git@github.com:mateothegreat/docker-alpine-htpasswd.git
+	branch = master

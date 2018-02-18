@@ -1,0 +1,47 @@
+#
+# https://github.com/kubernetes/ingress-nginx/tree/master/docs/examples/customization/configuration-snippets
+# https://github.com/kubernetes/ingress-nginx/tree/master/docs/examples/rewrite
+
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: streaming-platform.com
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+    kubernetes.io/tls-acme: "true"
+    kubernetes.io/ingress.global-static-ip-name: "ingress"
+    ingress.kubernetes.io/from-to-www-redirect: "true"
+    # nginx.ingress.kubernetes.io/configuration-snippet: |
+    #   rewrite ^/(.*)$ https://<new-domain>/$1 permanent;
+    # # nginx.ingress.kubernetes.io/secure-backends: "true"
+    # nginx.ingress.kubernetes.io/rewrite-target: "/"
+    # kubernetes.io/ingress.global-static-ip-name: "ingress"
+    # ingress.kubernetes.io/auth-type: basic
+    # ingress.kubernetes.io/auth-secret: basic-auth
+    # ingress.kubernetes.io/auth-realm: "Authentication Required"
+    # nginx.ingress.kubernetes.io/server-alias: "ingress.gcp.streaming-platform.com"
+spec:
+  tls:
+  - hosts:
+    - streaming-platform.com
+    secretName: tls-streaming-platform.com
+  - hosts:
+    - www.streaming-platform.com
+    secretName: tls-www.streaming-platform.com
+
+  rules:
+  - host: streaming-platform.com
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: wordpress
+          servicePort: 80
+
+  - host: www.streaming-platform.com
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: wordpress
+          servicePort: 80
