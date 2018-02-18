@@ -1,5 +1,6 @@
 include .make/Makefile.inc
 
+TIME		:= $(shell date +"%Y-%m-%d_%H%M%S")
 MODULES		:= 	k8-byexamples-dashboard				\
 				k8-byexamples-echoserver				\
 				k8-byexamples-elasticsearch-cluster 	\
@@ -20,9 +21,9 @@ init: 				; @git submodule update --init
 init-modules: init 	; @for F in $(MODULES); do $(MAKE) init-submodule-$$F; done
 init-submodule-%:	; @echo $*; if [ -d modules/$*/.make ]; then cd modules/$* && git submodule update --init; else cd modules/$* && git submodule add -b master git@github.com:mateothegreat/.make.git; fi
 
-clean: 				; rm -rf modules/.make; rm -rf modules/*
-
-commit:  			; @for F in $(MODULES); do cd modules/$* && git add . && git commit -am'$$MESSAGE' && git push; done
+backup: 			; @echo $(TIME); tar -czf ../.backup/modules.$(TIME).tar .
+clean: 	backup		; rm -rf modules/.make; rm -rf modules/*
+commit: backup		; @for F in $(MODULES); do cd $(PWD)/modules/$$F && git add . && git commit -am'$$MESSAGE' && git push origin HEAD:master; done
 
 ## Output list of submodules & repositories
 dump: 
