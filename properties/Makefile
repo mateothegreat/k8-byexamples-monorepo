@@ -1,6 +1,9 @@
-PROPERTIES :=   streaming-platform.com  \
-				streamnvr.com           \
-				platformnvr.com
+include .make/Makefile.inc
 
-install:	; @for F in $(PROPERTIES); do $(MAKE) -C $$F install; done
-delete:		; @for F in $(PROPERTIES); do $(MAKE) -C $$F delete; done
+PROPERTIES 	:= $(shell find . -maxdepth 1 -mindepth 1 -type d 2> /dev/null | tr '\r\n' ' ')
+
+deploy:		loop-deploy tests
+rollback:	loop-rollback tests
+tests:		loop-testing-curl
+
+loop-%:		; @for F in $(PROPERTIES); do $(MAKE) -C $$F $*; done

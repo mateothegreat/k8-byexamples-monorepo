@@ -78,3 +78,19 @@
 	path = docker/docker-alpine-htpasswd
 	url = git@github.com:mateothegreat/docker-alpine-htpasswd.git
 	branch = master
+[submodule "properties/streamnvr.com/.make"]
+	path = properties/streamnvr.com/.make
+	url = git@github.com:mateothegreat/.make.git
+	branch = master
+[submodule "properties/platformnvr.com/.make"]
+	path = properties/platformnvr.com/.make
+	url = git@github.com:mateothegreat/.make.git
+	branch = master
+[submodule "properties/streaming-platform.com/.make"]
+	path = properties/streaming-platform.com/.make
+	url = git@github.com:mateothegreat/.make.git
+	branch = master
+[submodule "properties/echoserver.gcp.streaming-platform.com/.make"]
+	path = properties/echoserver.gcp.streaming-platform.com/.make
+	url = git@github.com:mateothegreat/.make.git
+	branch = master
