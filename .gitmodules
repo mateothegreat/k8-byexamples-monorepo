@@ -2,7 +2,63 @@
 	path = modules/.make
 	url = git@github.com:mateothegreat/.make.git
 	branch = master
-[submodule "modules/mysql"]
-	path = modules/mysql
+[submodule "modules/k8-byexamples-mysql"]
+	path = modules/k8-byexamples-mysql
 	url = git@github.com:mateothegreat/k8-byexamples-mysql
+	branch = master
+[submodule ".make"]
+	path = .make
+	url = git@github.com:mateothegreat/.make.git
+	branch = master
+[submodule "modules/k8-byexamples-gitlab"]
+	path = modules/k8-byexamples-gitlab
+	url = git@github.com:mateothegreat/k8-byexamples-gitlab
+	branch = master
+[submodule "modules/k8-byexamples-openvpn"]
+	path = modules/k8-byexamples-openvpn
+	url = git@github.com:mateothegreat/k8-byexamples-openvpn
+	branch = master
+[submodule "modules/k8-byexamples-keycloak"]
+	path = modules/k8-byexamples-keycloak
+	url = git@github.com:mateothegreat/k8-byexamples-keycloak
+	branch = master
+[submodule "modules/k8-byexamples-monitoring-grafana"]
+	path = modules/k8-byexamples-monitoring-grafana
+	url = git@github.com:mateothegreat/k8-byexamples-monitoring-grafana
+	branch = master
+[submodule "modules/k8-byexamples-monitoring-prometheus"]
+	path = modules/k8-byexamples-monitoring-prometheus
+	url = git@github.com:mateothegreat/k8-byexamples-monitoring-prometheus
+	branch = master
+[submodule "modules/k8-byexamples-redis"]
+	path = modules/k8-byexamples-redis
+	url = git@github.com:mateothegreat/k8-byexamples-redis
+	branch = master
+[submodule "modules/k8-byexamples-rabbitmq-cluster"]
+	path = modules/k8-byexamples-rabbitmq-cluster
+	url = git@github.com:mateothegreat/k8-byexamples-rabbitmq-cluster
+	branch = master
+[submodule "modules/k8-byexamples-elasticsearch-cluster"]
+	path = modules/k8-byexamples-elasticsearch-cluster
+	url = git@github.com:mateothegreat/k8-byexamples-elasticsearch-cluster
+	branch = master
+[submodule "modules/k8-byexamples-kibana"]
+	path = modules/k8-byexamples-kibana
+	url = git@github.com:mateothegreat/k8-byexamples-kibana
+	branch = master
+[submodule "modules/k8-byexamples-wordpress"]
+	path = modules/k8-byexamples-wordpress
+	url = git@github.com:mateothegreat/k8-byexamples-wordpress
+	branch = master
+[submodule "modules/k8-byexamples-echoserver"]
+	path = modules/k8-byexamples-echoserver
+	url = git@github.com:mateothegreat/k8-byexamples-echoserver
+	branch = master
+[submodule "modules/k8-byexamples-dashboard"]
+	path = modules/k8-byexamples-dashboard
+	url = git@github.com:mateothegreat/k8-byexamples-dashboard
+	branch = master
+[submodule "modules/k8-byexamples-fluentd-collector"]
+	path = modules/k8-byexamples-fluentd-collector
+	url = git@github.com:mateothegreat/k8-byexamples-fluentd-collector
 	branch = master
