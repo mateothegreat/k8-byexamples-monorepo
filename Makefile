@@ -1,32 +1,38 @@
 include .make/Makefile.inc
 
-add-%:
+MODULES		:= 	k8-byexamples-dashboard				\
+				k8-byexamples-echoserver				\
+				k8-byexamples-elasticsearch-cluster 	\
+				k8-byexamples-fluentd-collector		\
+				k8-byexamples-gitlab					\
+				k8-byexamples-keycloak 				\
+				k8-byexamples-kibana 					\
+				k8-byexamples-monitoring-grafana 		\
+				k8-byexamples-monitoring-prometheus 	\
+				k8-byexamples-mysql 					\
+				k8-byexamples-openvpn 					\
+				k8-byexamples-rabbitmq-cluster 		\
+				k8-byexamples-redis 					\
+				k8-byexamples-wordpress
 
-	git submodule add -b master git@github.com:mateothegreat/k8-byexamples-$* modules/k8-byexamples-$*
 
-init-modules: 	init-k8-byexamples-dashboard				\
-				init-k8-byexamples-echoserver				\
-				init-k8-byexamples-elasticsearch-cluster 	\
-				init-k8-byexamples-fluentd-collector		\
-				init-k8-byexamples-gitlab					\
-				init-k8-byexamples-keycloak 				\
-				init-k8-byexamples-kibana 					\
-				init-k8-byexamples-monitoring-grafana 		\
-				init-k8-byexamples-monitoring-prometheus 	\
-				init-k8-byexamples-mysql 					\
-				init-k8-byexamples-openvpn 					\
-				init-k8-byexamples-rabbitmq-cluster 		\
-				init-k8-byexamples-redis 					\
-				init-k8-byexamples-wordpress
+init: 				; @git submodule update --init
+init-modules: init 	; @for F in $(MODULES); do $(MAKE) init-submodule-$$F; done
+init-submodule-%:	; @echo $*; if [ -d modules/$*/.make ]; then cd modules/$* && git submodule update --init; else cd modules/$* && git submodule add -b master git@github.com:mateothegreat/.make.git; fi
 
-	# git submodule foreach 'git fetch origin; git checkout master; git reset --hard origin/master; git submodule update --recursive; git clean -dfx'
-init: ;	git submodule update --init
+clean: 				; rm -rf modules/.make; rm -rf modules/*
 
-init-%:
+commit:  			; @for F in $(MODULES); do cd modules/$* && git add . && git commit -am'$$MESSAGE' && git push; done
 
-	if [ -d modules/$*/.make ]; then cd modules/$* && git submodule update --init; else cd modules/$* && git submodule add -b master git@github.com:mateothegreat/.make.git; fi
+## Output list of submodules & repositories
+dump: 
 
-clean:
+	@printf "$(YELLOW)\n%-46s%s\n\n$(BLUE)" "Submodule Name" "Submodule Repository" 
+	@for F in $(MODULES); do	printf "%-45s@%s\n" $$F https://github.com/mateothegreat/$$F | sed -e 's/ /./g' -e 's/@/ /' -e 's/-/ /'; done
+	@printf "\n"
 
-	rm -rf modules/.make
-	rm -rf modules/*
+# dump: $(MODULES)
+# $(MODULES):
+
+# 	@printf "%-45s@%s\n" $(@F) https://github.com/mateothegreat/$(@F) | sed -e 's/ /./g' -e 's/@/ /' 
+add-%: 			; git submodule add -b master git@github.com:mateothegreat/k8-byexamples-$* modules/k8-byexamples-$*
