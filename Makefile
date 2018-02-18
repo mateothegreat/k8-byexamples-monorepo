@@ -40,19 +40,59 @@ dump:
 # 	@printf "%-45s@%s\n" $(@F) https://github.com/mateothegreat/$(@F) | sed -e 's/ /./g' -e 's/@/ /' 
 add-%: 			; git submodule add -b master git@github.com:mateothegreat/k8-byexamples-$* modules/k8-byexamples-$*; cd modules/k8-byexamples-$* && git submodule update --init
 
-wordpress/install:
+streaming-platform/wordpress/install:
 
-	$(MAKE) -C modules/k8-byexamples-wordpress APP=streaming-platform-wp install 
-	$(MAKE) -C modules/k8-byexamples-ingress-controller HOST=streaming-platform.com 	SERVICE_NAME=streaming-platform-wp SERVICE_PORT=80 issue
-	$(MAKE) -C modules/k8-byexamples-ingress-controller HOST=www.streaming-platform.com SERVICE_NAME=streaming-platform-wp SERVICE_PORT=80 issue
-	$(MAKE) -C modules/k8-byexamples-ingress-controller HOST=gcp.streaming-platform.com SERVICE_NAME=streaming-platform-wp SERVICE_PORT=80 issue
+	$(MAKE) -C modules/k8-byexamples-wordpress APP=streaming-platform-wp 				SERVICE_NAME=streaming-platform-wp 	SERVICE_PORT=8001 install 
+	$(MAKE) -C modules/k8-byexamples-ingress-controller HOST=streaming-platform.com 	SERVICE_NAME=streaming-platform-wp 	SERVICE_PORT=8001 issue
+	$(MAKE) -C modules/k8-byexamples-ingress-controller HOST=www.streaming-platform.com SERVICE_NAME=streaming-platform-wp 	SERVICE_PORT=8001 issue
 
-wordpress/delete:
+streaming-platform/wordpress/delete:
 
 	$(MAKE) -C modules/k8-byexamples-wordpress APP=streaming-platform-wp delete
 	$(MAKE) -C modules/k8-byexamples-ingress-controller HOST=streaming-platform.com		revoke
 	$(MAKE) -C modules/k8-byexamples-ingress-controller HOST=www.streaming-platform.com	revoke
-	$(MAKE) -C modules/k8-byexamples-ingress-controller HOST=gcp.streaming-platform.com	revoke
 
-deploy:
+streamnvr/wordpress/install:
 
+	$(MAKE) -C modules/k8-byexamples-wordpress APP=streamnvr-wp 						SERVICE_NAME=streamnvr-wp 			SERVICE_PORT=8002 install 
+	$(MAKE) -C modules/k8-byexamples-ingress-controller HOST=streamnvr.com 				SERVICE_NAME=streamnvr-wp 			SERVICE_PORT=8002 issue
+	$(MAKE) -C modules/k8-byexamples-ingress-controller HOST=www.streamnvr.com 			SERVICE_NAME=streamnvr-wp 			SERVICE_PORT=8002 issue
+
+
+platformnvr/wordpress/install:
+
+	$(MAKE) -C modules/k8-byexamples-wordpress APP=platformnvr-wp 						SERVICE_NAME=platformnvr-wp 		SERVICE_PORT=8003 install
+	$(MAKE) -C modules/k8-byexamples-ingress-controller HOST=platformnvr.com 			SERVICE_NAME=platformnvr-wp 		SERVICE_PORT=8003 issue
+	$(MAKE) -C modules/k8-byexamples-ingress-controller HOST=www.platformnvr.com 		SERVICE_NAME=platformnvr-wp 		SERVICE_PORT=8003 issue
+
+
+wordpress/install:
+
+	$(MAKE) -C modules/k8-byexamples-wordpress APP=streaming-platform-wp 				SERVICE_NAME=streaming-platform-wp 	SERVICE_PORT=8001 install 
+	$(MAKE) -C modules/k8-byexamples-wordpress APP=streamnvr-wp 						SERVICE_NAME=streamnvr-wp 			SERVICE_PORT=8002 install 
+	$(MAKE) -C modules/k8-byexamples-wordpress APP=platformnvr-wp 						SERVICE_NAME=platformnvr-wp 		SERVICE_PORT=8003 install
+
+	$(MAKE) -C modules/k8-byexamples-ingress-controller HOST=streaming-platform.com 	SERVICE_NAME=streaming-platform-wp 	SERVICE_PORT=8001 issue
+	$(MAKE) -C modules/k8-byexamples-ingress-controller HOST=www.streaming-platform.com SERVICE_NAME=streaming-platform-wp 	SERVICE_PORT=8001 issue
+	$(MAKE) -C modules/k8-byexamples-ingress-controller HOST=streamnvr.com 				SERVICE_NAME=streamnvr-wp 			SERVICE_PORT=8002 issue
+	$(MAKE) -C modules/k8-byexamples-ingress-controller HOST=www.streamnvr.com 			SERVICE_NAME=streamnvr-wp 			SERVICE_PORT=8002 issue
+	$(MAKE) -C modules/k8-byexamples-ingress-controller HOST=platformnvr.com 			SERVICE_NAME=platformnvr-wp 		SERVICE_PORT=8003 issue
+	$(MAKE) -C modules/k8-byexamples-ingress-controller HOST=www.platformnvr.com 		SERVICE_NAME=platformnvr-wp 		SERVICE_PORT=8003 issue
+
+wordpress/delete:
+
+	$(MAKE) -C modules/k8-byexamples-wordpress APP=streaming-platform-wp 				delete
+	$(MAKE) -C modules/k8-byexamples-wordpress APP=streamnvr-wp 						delete
+	$(MAKE) -C modules/k8-byexamples-wordpress APP=platformnvr-wp 						delete
+
+	$(MAKE) -C modules/k8-byexamples-ingress-controller HOST=streaming-platform.com		revoke
+	$(MAKE) -C modules/k8-byexamples-ingress-controller HOST=www.streaming-platform.com	revoke
+	$(MAKE) -C modules/k8-byexamples-ingress-controller HOST=streamnvr.com				revoke
+	$(MAKE) -C modules/k8-byexamples-ingress-controller HOST=www.streamnvr.com			revoke
+	$(MAKE) -C modules/k8-byexamples-ingress-controller HOST=platformnvr.com			revoke
+	$(MAKE) -C modules/k8-byexamples-ingress-controller HOST=www.platformnvr.com		revoke
+
+testing/install:
+
+	$(MAKE) -C modules/k8-byexamples-echoserver install
+	$(MAKE) -C modules/k8-byexamples-ingress-controller HOST=echoserver.gcp.streaming-platform.com revoke
