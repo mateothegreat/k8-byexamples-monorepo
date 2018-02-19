@@ -94,3 +94,11 @@
 	path = properties/echoserver.gcp.streaming-platform.com/.make
 	url = git@github.com:mateothegreat/.make.git
 	branch = master
+[submodule "modules/k8-byexamples-zipkin"]
+	path = modules/k8-byexamples-zipkin
+	url = git@github.com:mateothegreat/k8-byexamples-zipkin
+	branch = master
+[submodule "modules/k8-byexamples-cert-manager"]
+	path = modules/k8-byexamples-cert-manager
+	url = git@github.com:mateothegreat/k8-byexamples-cert-manager
+	branch = master
