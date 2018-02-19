@@ -102,10 +102,6 @@
 	path = modules/k8-byexamples-cert-manager
 	url = git@github.com:mateothegreat/k8-byexamples-cert-manager
 	branch = master
-[submodule "modules/k8-byexamples-confluence"]
-	path = modules/k8-byexamples-confluence
-	url = git@github.com:mateothegreat/k8-byexamples-confluence
-	branch = master
 [submodule "modules/k8-byexamples-postgresql"]
 	path = modules/k8-byexamples-postgresql
 	url = git@github.com:mateothegreat/k8-byexamples-postgresql
