@@ -1,0 +1,4 @@
+[submodule "kubernetes-atlassian-confluence/.make"]
+	path = kubernetes-atlassian-confluence/.make
+	url = git@github.com:mateothegreat/.make.git
+	branch = master

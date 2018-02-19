@@ -1,0 +1,8 @@
+[submodule ".make"]
+	path = .make
+	url = git@github.com:mateothegreat/.make.git
+	branch = master
+[submodule "kubernetes-atlassian-stack"]
+	path = kubernetes-atlassian-stack
+	url = git@github.com:mateothegreat/kubernetes-atlassian-stack.git
+	branch = master
