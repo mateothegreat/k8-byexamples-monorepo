@@ -1,25 +1,7 @@
-CLIENT VALUES:
-client_address=10.28.2.82
-command=GET
-real path=/
-query=nil
-request_version=1.1
-request_uri=http://echoserver.gcp.streaming-platform.com:8080/
-
-SERVER VALUES:
-server_version=nginx: 1.10.0 - lua: 10001
-
-HEADERS RECEIVED:
-accept=*/*
-connection=close
-host=echoserver.gcp.streaming-platform.com
-user-agent=curl/7.47.0
-x-forwarded-for=10.2.0.2
-x-forwarded-host=echoserver.gcp.streaming-platform.com
-x-forwarded-port=443
-x-forwarded-proto=https
-x-original-uri=/
-x-real-ip=10.2.0.2
-x-scheme=https
-BODY:
--no body in request-
+<html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body bgcolor="white">
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
