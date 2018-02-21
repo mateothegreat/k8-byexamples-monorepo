@@ -97,88 +97,22 @@ setup/grant:
 
 	kubectl create clusterrolebinding cluster-admin-binding --clusterrole=cluster-admin --user=$(gcloud info | grep Account | cut -d '[' -f 2 | cut -d ']' -f 1) | true
 
-setup/prerequisites: setup/grant
-
-	# Pre-requisites
-	$(MAKE) -C modules/k8-byexamples-cert-manager install
-	$(MAKE) -C modules/k8-byexamples-ingress-controller install LOADBALANCER_IP=35.224.16.183
-
-ingress/install: setup/prerequisites
-
-	# Pre-requisites
-	$(MAKE) -C modules/k8-byexamples-cert-manager install
-	$(MAKE) -C modules/k8-byexamples-ingress-controller install
-
-
-
-ingress/remove:
-
-	$(MAKE) -C modules/k8-byexamples-cert-manager delete
-	$(MAKE) -C modules/k8-byexamples-ingress-controller delete
-
-
-streaming-platform/wordpress/delete:
-
-	$(MAKE) -C modules/k8-byexamples-wordpress APP=streaming-platform-wp delete
-	$(MAKE) -C modules/k8-byexamples-ingress-controller HOST=streaming-platform.com		revoke
-	$(MAKE) -C modules/k8-byexamples-ingress-controller HOST=www.streaming-platform.com	revoke
-
-streamnvr/wordpress/install:
-
-	$(MAKE) -C modules/k8-byexamples-wordpress APP=streamnvr-wp 						SERVICE_NAME=streamnvr-wp 			SERVICE_PORT=8002 install 
-	$(MAKE) -C modules/k8-byexamples-ingress-controller HOST=streamnvr.com 				SERVICE_NAME=streamnvr-wp 			SERVICE_PORT=8002 issue
-	$(MAKE) -C modules/k8-byexamples-ingress-controller HOST=www.streamnvr.com 			SERVICE_NAME=streamnvr-wp 			SERVICE_PORT=8002 issue
-
-
-platformnvr/wordpress/install:
-
-	$(MAKE) -C modules/k8-byexamples-wordpress APP=platformnvr-wp 						SERVICE_NAME=platformnvr-wp 		SERVICE_PORT=8003 install
-	$(MAKE) -C modules/k8-byexamples-ingress-controller HOST=platformnvr.com 			SERVICE_NAME=platformnvr-wp 		SERVICE_PORT=8003 issue
-	$(MAKE) -C modules/k8-byexamples-ingress-controller HOST=www.platformnvr.com 		SERVICE_NAME=platformnvr-wp 		SERVICE_PORT=8003 issue
-
-
-wordpress/install:
-
-	$(MAKE) -C modules/k8-byexamples-wordpress APP=streaming-platform-wp 				SERVICE_NAME=streaming-platform-wp 	SERVICE_PORT=8001 install 
-	$(MAKE) -C modules/k8-byexamples-wordpress APP=streamnvr-wp 						SERVICE_NAME=streamnvr-wp 			SERVICE_PORT=8002 install 
-	$(MAKE) -C modules/k8-byexamples-wordpress APP=platformnvr-wp 						SERVICE_NAME=platformnvr-wp 		SERVICE_PORT=8003 install
-
-	$(MAKE) -C modules/k8-byexamples-ingress-controller HOST=streaming-platform.com 	SERVICE_NAME=streaming-platform-wp 	SERVICE_PORT=8001 issue
-	$(MAKE) -C modules/k8-byexamples-ingress-controller HOST=www.streaming-platform.com SERVICE_NAME=streaming-platform-wp 	SERVICE_PORT=8001 issue
-	$(MAKE) -C modules/k8-byexamples-ingress-controller HOST=streamnvr.com 				SERVICE_NAME=streamnvr-wp 			SERVICE_PORT=8002 issue
-	$(MAKE) -C modules/k8-byexamples-ingress-controller HOST=www.streamnvr.com 			SERVICE_NAME=streamnvr-wp 			SERVICE_PORT=8002 issue
-	$(MAKE) -C modules/k8-byexamples-ingress-controller HOST=platformnvr.com 			SERVICE_NAME=platformnvr-wp 		SERVICE_PORT=8003 issue
-	$(MAKE) -C modules/k8-byexamples-ingress-controller HOST=www.platformnvr.com 		SERVICE_NAME=platformnvr-wp 		SERVICE_PORT=8003 issue
-
-wordpress/delete:
-
-	$(MAKE) -C modules/k8-byexamples-wordpress APP=streaming-platform-wp 				delete
-	$(MAKE) -C modules/k8-byexamples-wordpress APP=streamnvr-wp 						delete
-	$(MAKE) -C modules/k8-byexamples-wordpress APP=platformnvr-wp 						delete
-
-	$(MAKE) -C modules/k8-byexamples-ingress-controller HOST=streaming-platform.com		revoke
-	$(MAKE) -C modules/k8-byexamples-ingress-controller HOST=www.streaming-platform.com	revoke
-	$(MAKE) -C modules/k8-byexamples-ingress-controller HOST=streamnvr.com				revoke
-	$(MAKE) -C modules/k8-byexamples-ingress-controller HOST=www.streamnvr.com			revoke
-	$(MAKE) -C modules/k8-byexamples-ingress-controller HOST=platformnvr.com			revoke
-	$(MAKE) -C modules/k8-byexamples-ingress-controller HOST=www.platformnvr.com		revoke
-
-testing/install:
-
-	$(MAKE) -C modules/k8-byexamples-echoserver install
-	$(MAKE) -C modules/k8-byexamples-ingress-controller HOST=echoserver.gcp.streaming-platform.com revoke
-
-
 # dump: $(MODULES)
 # $(MODULES):
 
 # 	@printf "%-45s@%s\n" $(@F) https://github.com/mateothegreat/$(@F) | sed -e 's/ /./g' -e 's/@/ /' 
-add-%: 			; git submodule add -b master git@github.com:mateothegreat/k8-byexamples-$* modules/k8-byexamples-$*; cd modules/k8-byexamples-$* ; git submodule update --init
+git/add-%: 				; git submodule add -b master git@github.com:mateothegreat/k8-byexamples-$* modules/k8-byexamples-$*; cd modules/k8-byexamples-$* ; git submodule update --init
 
-init: 				; @git submodule update --init
-init-modules: init 	; @for F in $(MODULES); do $(MAKE) init-submodule-$$F; done
-init-submodule-%:	; @echo $*; if [ -d modules/$*/.make ]; then cd modules/$* && git submodule update --init; else cd modules/$* && git submodule add -b master git@github.com:mateothegreat/.make.git; fi
+git/init: 				; @git submodule update --init
+git/init-modules: init 	; @for F in $(MODULES); do $(MAKE) init-submodule-$$F; done
+git/init-submodule-%:	; @echo $*; if [ -d modules/$*/.make ]; then cd modules/$* && git submodule update --init; else cd modules/$* && git submodule add -b master git@github.com:mateothegreat/.make.git; fi
 
-backup: 			; @echo $(TIME); tar -czf ../.backup/modules.$(TIME).tar .
-clean: 	backup		; rm -rf modules/.make; rm -rf modules/*
-commit: backup		; @for F in $(MODULES); do cd $(PWD)/modules/$$F && git add . && git commit -am'$$MESSAGE' && git push origin HEAD:master; done
+git/backup: 			; @echo $(TIME); tar -czf ../.backup/modules.$(TIME).tar .
+git/clean: 	git/backup	; rm -rf modules/.make; rm -rf modules/*
+git/commit: git/backup	; @for F in $(MODULES); do echo "$(YELLOW)/modules/$$F$(BLUE)" && cd $(PWD)/modules/$$F && git add . && git commit -am'$$MESSAGE' && git push origin HEAD:master; done
+
+git/status: 			; git submodule status --recursive
+
+git/fix-tracking: git/backup	;
+
+	@for F in $(MODULES); do echo "$(YELLOW)/modules/$$F$(BLUE)" && cd $(PWD)/modules/$$F && git config -f .gitmodules submodule..make.branch master && git branch -u origin/master master && git checkout master; done
