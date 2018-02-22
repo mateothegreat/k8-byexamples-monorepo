@@ -70,6 +70,6 @@ setup/cluster:
 
 commit:
 
-	git add . && git commit -am'bump' && git push
-	cd .make && git add . && git commit -am'bump' && git push
+	-git add . && git commit -am'bump' && git push
+	-cd .make && git add . && git commit -am'bump' && git push
 	$(MAKE) git/.make-up
