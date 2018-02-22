@@ -2,22 +2,6 @@ include .make/Makefile.inc
 
 CLUSTER		?= cluster-6
 NS			:= default
-TIME		:= $(shell date +"%Y-%m-%d_%H%M%S")
-MODULES		:= 	k8-byexamples-dashboard					\
-				k8-byexamples-ingress-controller		\
-				k8-byexamples-echoserver				\
-				k8-byexamples-elasticsearch-cluster 	\
-				k8-byexamples-fluentd-collector			\
-				k8-byexamples-gitlab					\
-				k8-byexamples-keycloak 					\
-				k8-byexamples-kibana 					\
-				k8-byexamples-monitoring-grafana 		\
-				k8-byexamples-monitoring-prometheus 	\
-				k8-byexamples-mysql 					\
-				k8-byexamples-openvpn 					\
-				k8-byexamples-rabbitmq-cluster 			\
-				k8-byexamples-redis 					\
-				k8-byexamples-wordpress
 export
 
 01_vpn: setup/prerequisites
@@ -64,14 +48,6 @@ export
 #
 #
 #
-
-## Output list of submodules & repositories
-dump: 
-
-	@printf "$(YELLOW)\n%-46s%s\n\n$(BLUE)" "Submodule Name" "Submodule Repository" 
-	@for F in $(MODULES); do	printf "%-45s@%s\n" $$F https://github.com/mateothegreat/$$F | sed -e 's/ /./g' -e 's/@/ /' -e 's/-/ /'; done
-	@printf "\n"
-
 setup/cluster:
 
 	gcloud alpha container 	--project "streaming-platform-devqa" 	\
@@ -92,31 +68,8 @@ setup/cluster:
 
 	gcloud container clusters get-credentials $(CLUSTER)
 
-## Create cluster-admin-binding for current gcloud user
-setup/grant:
+commit:
 
-	kubectl create clusterrolebinding cluster-admin-binding --clusterrole=cluster-admin --user=$(gcloud info | grep Account | cut -d '[' -f 2 | cut -d ']' -f 1) | true
-
-# dump: $(MODULES)
-# $(MODULES):
-
-# 	@printf "%-45s@%s\n" $(@F) https://github.com/mateothegreat/$(@F) | sed -e 's/ /./g' -e 's/@/ /' 
-git/add-%: 				; git submodule add -b master git@github.com:mateothegreat/k8-byexamples-$* modules/k8-byexamples-$*; cd modules/k8-byexamples-$* ; git submodule update --init
-
-git/init: 				; @git submodule update --init
-git/init-modules: init 	; @for F in $(MODULES); do $(MAKE) init-submodule-$$F; done
-git/init-submodule-%:	; @echo $*; if [ -d modules/$*/.make ]; then cd modules/$* && git submodule update --init; else cd modules/$* && git submodule add -b master git@github.com:mateothegreat/.make.git; fi
-
-git/backup: 			; @echo $(TIME); tar -czf ../.backup/modules.$(TIME).tar .
-git/clean: 	git/backup	; rm -rf modules/.make; rm -rf modules/*
-git/commit: git/backup	; @for F in $(MODULES); do echo "$(YELLOW)/modules/$$F$(BLUE)" && cd $(PWD)/modules/$$F && git add . && git commit -am'$$MESSAGE' && git push origin HEAD:master; done
-
-git/status: 			; git submodule status --recursive
-
-git/fix-tracking: git/backup	;
-
-	@for F in $(MODULES); do echo "$(YELLOW)/modules/$$F$(BLUE)" && cd $(PWD)/modules/$$F && git config -f .gitmodules submodule..make.branch master && git branch -u origin/master master && git checkout master; done
-
-git/.make-up: git/backup
-
-	@for F in $(MODULES); do echo "$(YELLOW)/modules/$$F$(BLUE)" && cd $(PWD)/modules/$$F/.make && git checkout master && cd .. && git add . && git commit -am'bump' && git push; done
+	git add . && git commit -am'bump' && git push
+	cd .make && git add . && git commit -am'bump' && git push
+	$(MAKE) git/.make-up

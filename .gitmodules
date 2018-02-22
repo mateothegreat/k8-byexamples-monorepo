@@ -106,3 +106,7 @@
 	path = modules/k8-byexamples-postgresql
 	url = git@github.com:mateothegreat/k8-byexamples-postgresql
 	branch = master
+[submodule "modules/k8-byexamples-gcloud-preemptible-starter"]
+	path = modules/k8-byexamples-gcloud-preemptible-starter
+	url = git@github.com:mateothegreat/k8-byexamples-gcloud-preemptible-starter
+	branch = master
