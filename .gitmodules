@@ -1,7 +1,3 @@
-[submodule "modules/.make"]
-	path = modules/.make
-	url = git@github.com:mateothegreat/.make.git
-	branch = master
 [submodule "modules/k8-byexamples-mysql"]
 	path = modules/k8-byexamples-mysql
 	url = git@github.com:mateothegreat/k8-byexamples-mysql
@@ -129,4 +125,12 @@
 [submodule "modules/kubernetes-atlassian-confluence"]
 	path = modules/kubernetes-atlassian-confluence
 	url = git@github.com:mateothegreat/kubernetes-atlassian-confluence.git
+	branch = master
+[submodule "modules/k8-byexamples-gluu"]
+	path = modules/k8-byexamples-gluu
+	url = git@github.com:mateothegreat/k8-byexamples-gluu
+	branch = master
+[submodule "modules/modules/k8-byexamples-haproxy"]
+	path = modules/modules/k8-byexamples-haproxy
+	url = git@github.com:mateothegreat/k8-byexamples-haproxy
 	branch = master
