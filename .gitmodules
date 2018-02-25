@@ -134,3 +134,11 @@
 	path = modules/modules/k8-byexamples-haproxy
 	url = git@github.com:mateothegreat/k8-byexamples-haproxy
 	branch = master
+[submodule "modules/k8-byexamples-keycloak-proxy"]
+	path = modules/k8-byexamples-keycloak-proxy
+	url = git@github.com:mateothegreat/k8-byexamples-keycloak-proxy
+	branch = master
+[submodule "modules/k8-byexamples-minio"]
+	path = modules/k8-byexamples-minio
+	url = git@github.com:mateothegreat/k8-byexamples-minio
+	branch = master
