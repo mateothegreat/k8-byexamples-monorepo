@@ -110,3 +110,23 @@
 	path = modules/k8-byexamples-gcloud-preemptible-starter
 	url = git@github.com:mateothegreat/k8-byexamples-gcloud-preemptible-starter
 	branch = master
+[submodule "modules/k8-byexamples-guacamole"]
+	path = modules/k8-byexamples-guacamole
+	url = git@github.com:mateothegreat/k8-byexamples-guacamole
+	branch = master
+[submodule "modules/k8-byexamples-jenkins"]
+	path = modules/k8-byexamples-jenkins
+	url = git@github.com:mateothegreat/k8-byexamples-jenkins
+	branch = master
+[submodule "modules/k8-byexamples-google-ingressing"]
+	path = modules/k8-byexamples-google-ingressing
+	url = git@github.com:mateothegreat/k8-byexamples-google-ingressing
+	branch = master
+[submodule "modules/kubernetes-atlassian-jira"]
+	path = modules/kubernetes-atlassian-jira
+	url = git@github.com:mateothegreat/kubernetes-atlassian-jira.git
+	branch = master
+[submodule "modules/kubernetes-atlassian-confluence"]
+	path = modules/kubernetes-atlassian-confluence
+	url = git@github.com:mateothegreat/kubernetes-atlassian-confluence.git
+	branch = master
