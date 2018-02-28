@@ -4,16 +4,12 @@ CLUSTER		?= cluster-6
 NS			:= default
 export
 
-01_vpn: setup/prerequisites
+01_vpn: 
 
 	$(MAKE) -C modules/k8-byexamples-openvpn clean CN=vpn.streaming-platform.com
-	$(MAKE) -C modules/k8-byexamples-openvpn deploy CN=vpn.streaming-platform.com REMOTE_TAG=docker.io/appsoa/docker-alpine-openvpn DNS=10.11.240.10 PODS_SUBNET="10.11.0.0 255.255.0.0" SERVICES_SUBNET="10.11.0.0 255.255.0.0"
+	$(MAKE) -C modules/k8-byexamples-openvpn deploy CN=vpn.streaming-platform.com REMOTE_TAG=docker.io/appsoa/docker-alpine-openvpn DNS=10.11.240.10 PODS_SUBNET="10.8.0.0 255.255.0.0" SERVICES_SUBNET="10.11.0.0 255.255.0.0"
 	$(MAKE) -C modules/k8-byexamples-openvpn issue-cert CN=vpn.streaming-platform.com NAME=$(CLUSTER)-cert-1
 	$(MAKE) -C modules/k8-byexamples-openvpn resolv-conf CN=vpn.streaming-platform.com DNS=10.11.240.10
-
-	sleep 5
-
-	nslookup openvpn
 
 02_install_backend_services: 
 
