@@ -120,11 +120,11 @@
 	branch = master
 [submodule "modules/kubernetes-atlassian-jira"]
 	path = modules/kubernetes-atlassian-jira
-	url = git@github.com:mateothegreat/kubernetes-atlassian-jira.git
+	url = git@github.com:mateothegreat/kubernetes-atlassian-jira
 	branch = master
 [submodule "modules/kubernetes-atlassian-confluence"]
 	path = modules/kubernetes-atlassian-confluence
-	url = git@github.com:mateothegreat/kubernetes-atlassian-confluence.git
+	url = git@github.com:mateothegreat/kubernetes-atlassian-confluence
 	branch = master
 [submodule "modules/k8-byexamples-gluu"]
 	path = modules/k8-byexamples-gluu
@@ -145,3 +145,12 @@
 [submodule "kubernetes-atlassian-jira"]
 	path = kubernetes-atlassian-jira
 	url = git@github.com:mateothegreat/kubernetes-atlassian-jira
+[submodule "modules/k8-byexamples-cronjobs"]
+	path = modules/k8-byexamples-cronjobs
+	url = git@github.com:mateothegreat/k8-byexamples-cronjobs
+[submodule "modules/k8-byexamples-influxdb"]
+	path = modules/k8-byexamples-influxdb
+	url = git@github.com:mateothegreat/k8-byexamples-influxdb
+[submodule "modules/k8-byexamples-monitoring-metricbeat"]
+	path = modules/k8-byexamples-monitoring-metricbeat
+	url = git@github.com:mateothegreat/k8-byexamples-monitoring-metricbeat
