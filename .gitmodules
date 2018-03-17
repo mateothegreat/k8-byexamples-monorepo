@@ -64,7 +64,7 @@
 	branch = master
 [submodule "modules/k8-byexamples-ingress-controller"]
 	path = modules/k8-byexamples-ingress-controller
-	url = git@github.com:mateothegreat/k8-byexamples-ingress-controller
+	url = git@github.com:mateothegreat/k8-byexamples-ingress-controller.git
 	branch = master
 [submodule "applications/platform-ui"]
 	path = applications/platform-ui
@@ -142,3 +142,6 @@
 	path = modules/k8-byexamples-minio
 	url = git@github.com:mateothegreat/k8-byexamples-minio
 	branch = master
+[submodule "kubernetes-atlassian-jira"]
+	path = kubernetes-atlassian-jira
+	url = git@github.com:mateothegreat/kubernetes-atlassian-jira
