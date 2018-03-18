@@ -1,8 +1,13 @@
 include .make/Makefile.inc
 
+# MODULES := $(shell )
+MODULES_INSTALLS := $(shell grep -v "\#" modules.config)
+
 CLUSTER		?= cluster-6
 NS			:= default
 export
+
+modules/install: ; @echo; for F in $(MODULES_INSTALLS); do echo "[ INSTALLING $$F ]: " | tr 'a-z' 'A-Z' ; $(MAKE) -C modules/$$F install; echo; done; echo;
 
 01_vpn: 
 

@@ -154,3 +154,10 @@
 [submodule "modules/k8-byexamples-monitoring-metricbeat"]
 	path = modules/k8-byexamples-monitoring-metricbeat
 	url = git@github.com:mateothegreat/k8-byexamples-monitoring-metricbeat
+[submodule "modules/.make"]
+	path = modules/.make
+	url = git@github.com:mateothegreat/.make.git
+	branch = master
+[submodule "modules/--force"]
+	path = modules/--force
+	url = git@github.com:mateothegreat/k8-byexamples-ingress-controller.git
