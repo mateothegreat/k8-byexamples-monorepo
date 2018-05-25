@@ -38,7 +38,7 @@ modules/install: ; @echo; for F in $(MODULES_INSTALLS); do echo "[ INSTALLING $$
 
 	# Pre-requisites
 	$(MAKE) -C modules/k8-byexamples-cert-manager install
-	$(MAKE) -C modules/k8-byexamples-ingress-controller install LOADBALANCER_IP=35.224.16.183
+	$(MAKE) -C modules/k8-byexamples-ingress-controller install LOADBALANCER_IP=35.224.39.104
 
 04_deploy_wordpress_properties:
 

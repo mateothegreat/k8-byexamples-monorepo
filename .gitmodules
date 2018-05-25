@@ -161,3 +161,6 @@
 [submodule "modules/--force"]
 	path = modules/--force
 	url = git@github.com:mateothegreat/k8-byexamples-ingress-controller.git
+[submodule "modules/k8-byexamples-nginx"]
+	path = modules/k8-byexamples-nginx
+	url = git@github.com:mateothegreat/k8-byexamples-nginx.git
