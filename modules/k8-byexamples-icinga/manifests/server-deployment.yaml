@@ -1,0 +1,72 @@
+#                                 __                 __
+#    __  ______  ____ ___  ____ _/ /____  ____  ____/ /
+#   / / / / __ \/ __ `__ \/ __ `/ __/ _ \/ __ \/ __  /
+#  / /_/ / /_/ / / / / / / /_/ / /_/  __/ /_/ / /_/ /
+#  \__, /\____/_/ /_/ /_/\__,_/\__/\___/\____/\__,_/
+# /____                     matthewdavis.io, holla!
+#
+# https://hub.docker.com/r/bodsch/docker-icinga2/
+#
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: icinga2-master
+  namespace: $NS
+  labels:
+    app: icinga2-master
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: icinga2-master
+    spec:
+      containers:
+      - name: icinga2-master
+        image: $ICINGA2_SERVER_IMAGE
+        ports:
+        - containerPort: 5665
+        - containerPort: 8080
+        env:
+        - name: ICINGA2_API_USERS
+          value: $ICINGA2_API_USERS
+        - name: LOG_LEVEL
+          value: $LOG_LEVEL
+        - name: MYSQL_HOST
+          value: $MYSQL_HOST
+        - name: MYSQL_PORT
+          value: $MYSQL_PORT
+        - name: MYSQL_ROOT_USER
+          value: $MYSQL_ROOT_USER
+        - name: MYSQL_ROOT_PASS
+          value: $MYSQL_ROOT_PASS
+        - name: IDO_PASSWORD
+          value: $IDO_PASSWORD
+        - name: IDO_DATABASE_NAME
+          value: $IDO_DATABASE_NAME
+        - name: ICINGA2_MASTER
+          value: $ICINGA2_MASTER
+        - name: BASIC_AUTH_USER
+          value: $BASIC_AUTH_USER
+        - name: BASIC_AUTH_PASS
+          value: $BASIC_AUTH_PASS
+        - name: CERT_SERVICE_BA_USER
+          value: $CERT_SERVICE_BA_USER
+        - name: CERT_SERVICE_BA_PASSWORD
+          value: $CERT_SERVICE_BA_PASSWORD
+        - name: CERT_SERVICE_API_USER
+          value: $CERT_SERVICE_API_USER
+        - name: CERT_SERVICE_API_PASSWORD
+          value: $CERT_SERVICE_API_PASSWORD
+        - name: CERT_SERVICE_SERVER
+          value: $CERT_SERVICE_SERVER
+        - name: CERT_SERVICE_PORT
+          value: $CERT_SERVICE_PORT
+        - name: CERT_SERVICE_PATH
+          value: $CERT_SERVICE_PATH
+        - name: CARBON_HOST
+          value: $CARBON_HOST
+        - name: CARBON_PORT
+          value: $CARBON_PORT
+        - name: DEMO_DATA
+          value: $DEMO_DATA

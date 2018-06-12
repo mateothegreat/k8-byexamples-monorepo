@@ -5,9 +5,28 @@ MODULES_INSTALLS := $(shell grep -v "\#" modules.config)
 
 CLUSTER		?= cluster-6
 NS			:= default
-export
 
-modules/install: ; @echo; for F in $(MODULES_INSTALLS); do echo "[ INSTALLING $$F ]: " | tr 'a-z' 'A-Z' ; $(MAKE) -C modules/$$F install; echo; done; echo;
+install/modules: ; @echo; for F in $(MODULES_INSTALLS); do echo "[ INSTALLING $$F ]: " | tr 'a-z' 'A-Z' ; $(MAKE) -C modules/$$F install; echo; done; echo;
+
+
+install/igress:
+
+	# Pre-requisites
+	$(MAKE) -C modules/k8-byexamples-cert-manager install
+	$(MAKE) -C modules/k8-byexamples-ingress-controller install LOADBALANCER_IP=35.193.138.211
+
+install/certs:
+
+	$(MAKE) -C modules/k8-byexamples-ingress-controller issue 	HOST=elasticsearch.monitoring.streaming-platform.com 	SERVICE_NAME=elasticsearch 	SERVICE_PORT=9200
+	$(MAKE) -C modules/k8-byexamples-ingress-controller issue 	HOST=kibana.monitoring.streaming-platform.com 			SERVICE_NAME=kibana 		SERVICE_PORT=80
+	$(MAKE) -C modules/k8-byexamples-ingress-controller issue 	HOST=grafana.monitoring.streaming-platform.com 			SERVICE_NAME=grafana 		SERVICE_PORT=80
+	$(MAKE) -C modules/k8-byexamples-ingress-controller revoke 	HOST=zabbix.monitoring.streaming-platform.com 			SERVICE_NAME=zabbix-web		SERVICE_PORT=80
+	$(MAKE) -C modules/k8-byexamples-ingress-controller issue 	HOST=icinga.monitoring.streaming-platform.com 			SERVICE_NAME=icinga2-web	SERVICE_PORT=80
+
+install/test:
+
+	$(MAKE) -C modules/k8-byexamples-nginx install
+	$(MAKE) -C modules/k8-byexamples-ingress-controller issue 	HOST=test.monitoring.streaming-platform.com 	SERVICE_NAME=nginx 		SERVICE_PORT=80
 
 01_vpn: 
 

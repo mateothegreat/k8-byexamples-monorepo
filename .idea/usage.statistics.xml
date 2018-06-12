@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="FUSProjectUsageTrigger">
+    <session id="-797323629">
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="Dockerfile" value="8" />
+          <entry key="LICENSE" value="1" />
+          <entry key="Makefile" value="33" />
+          <entry key="am" value="1" />
+          <entry key="conf" value="1" />
+          <entry key="config" value="1" />
+          <entry key="crt" value="1" />
+          <entry key="env_make" value="3" />
+          <entry key="gitignore" value="2" />
+          <entry key="gitmodules" value="7" />
+          <entry key="in" value="1" />
+          <entry key="key" value="2" />
+          <entry key="master" value="1" />
+          <entry key="md" value="21" />
+          <entry key="mk" value="4" />
+          <entry key="ovpn" value="1" />
+          <entry key="sql" value="4" />
+          <entry key="vmoptions" value="1" />
+          <entry key="yaml" value="106" />
+          <entry key="yml" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Dockerfile" value="8" />
+          <entry key="Makefile" value="39" />
+          <entry key="Markdown" value="21" />
+          <entry key="PLAIN_TEXT" value="21" />
+          <entry key="SQL" value="4" />
+          <entry key="YAML" value="109" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="Dockerfile" value="290" />
+          <entry key="Makefile" value="1841" />
+          <entry key="config" value="37" />
+          <entry key="env_make" value="27" />
+          <entry key="gitignore" value="37" />
+          <entry key="gitmodules" value="8" />
+          <entry key="md" value="650" />
+          <entry key="mk" value="80" />
+          <entry key="txt" value="4" />
+          <entry key="yaml" value="1065" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="Dockerfile" value="290" />
+          <entry key="Makefile" value="1921" />
+          <entry key="Markdown" value="650" />
+          <entry key="PLAIN_TEXT" value="113" />
+          <entry key="YAML" value="1065" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+</project>

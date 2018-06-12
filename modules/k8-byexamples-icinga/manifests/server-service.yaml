@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: icinga2-master
+  namespace: $NS
+  labels:
+    app: icinga2-master
+spec:
+  type: NodePort
+  ports:
+    - name: api
+      port: 5665
+      targetPort: 5665
+    - name: cert
+      port: 8080
+      targetPort: 8080
+  selector:
+    app: icinga2-master

@@ -164,3 +164,6 @@
 [submodule "modules/k8-byexamples-nginx"]
 	path = modules/k8-byexamples-nginx
 	url = git@github.com:mateothegreat/k8-byexamples-nginx.git
+[submodule "modules/k8-byexamples-eclipse-che"]
+	path = modules/k8-byexamples-eclipse-che
+	url = git@github.com:mateothegreat/k8-byexamples-eclipse-che.git

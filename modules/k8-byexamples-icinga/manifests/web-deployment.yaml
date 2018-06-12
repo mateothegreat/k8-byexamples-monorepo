@@ -1,0 +1,61 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: icinga2-web
+  namespace: $NS
+  labels:
+    app: icinga2-web
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: icinga2-web
+    spec:
+      containers:
+      - name: icinga2-web
+        image: $ICINGA2_WEB_IMAGE
+        resources:
+          limits:
+            cpu: 100m
+            memory: 100Mi
+          requests:
+            cpu: 100m
+            memory: 100Mi
+#        readinessProbe:
+#          httpGet:
+#            path: /
+#            port: 80
+#          initialDelaySeconds: 120
+#          timeoutSeconds: 15
+        ports:
+          - containerPort: 80
+        env:
+        - name: MYSQL_HOST
+          value: $MYSQL_HOST
+        - name: MYSQL_PORT
+          value: $MYSQL_PORT
+        - name: MYSQL_ROOT_USER
+          value: $MYSQL_ROOT_USER
+        - name: MYSQL_ROOT_PASS
+          value: $MYSQL_ROOT_PASS
+        - name: IDO_PASSWORD
+          value: $IDO_PASSWORD
+        - name: IDO_DATABASE_NAME
+          value: $IDO_DATABASE_NAME
+        - name: ICINGA2_MASTER
+          value: $ICINGA2_MASTER
+        - name: ICINGA2_CMD_API_USER
+          value: $ICINGA2_CMD_API_USER
+        - name: ICINGA2_CMD_API_PASS
+          value: $ICINGA2_CMD_API_PASS
+        - name: ICINGAWEB2_USERS
+          value: $ICINGAWEB2_USERS
+
+#        volumeMounts:
+#          - name: grafana-persistent-storage
+#            mountPath: /var/lib/grafana
+#      volumes:
+#      - name: grafana-persistent-storage
+#        persistentVolumeClaim:
+#          claimName: grafana-persistent-storage

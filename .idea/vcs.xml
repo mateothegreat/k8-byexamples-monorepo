@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/.make" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/docker/docker-alpine-htpasswd" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/modules/k8-byexamples-cert-manager" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/modules/k8-byexamples-dashboard" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/modules/k8-byexamples-echoserver" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/modules/k8-byexamples-elasticsearch-cluster" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/modules/k8-byexamples-fluentd-collector" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/modules/k8-byexamples-gcloud-preemptible-starter" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/modules/k8-byexamples-gitlab" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/modules/k8-byexamples-gluu" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/modules/k8-byexamples-google-ingressing" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/modules/k8-byexamples-guacamole" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/modules/k8-byexamples-haproxy" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/modules/k8-byexamples-icinga" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/modules/k8-byexamples-influxdb" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/modules/k8-byexamples-ingress-controller" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/modules/k8-byexamples-jenkins" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/modules/k8-byexamples-keycloak" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/modules/k8-byexamples-keycloak-proxy" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/modules/k8-byexamples-kibana" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/modules/k8-byexamples-minio" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/modules/k8-byexamples-monitoring-grafana" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/modules/k8-byexamples-monitoring-metricbeat" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/modules/k8-byexamples-monitoring-prometheus" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/modules/k8-byexamples-mysql" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/modules/k8-byexamples-nginx" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/modules/k8-byexamples-openvpn" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/modules/k8-byexamples-postgresql" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/modules/k8-byexamples-rabbitmq-cluster" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/modules/k8-byexamples-redis" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/modules/k8-byexamples-wordpress" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/modules/k8-byexamples-zabbix" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/modules/k8-byexamples-zipkin" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/properties/.make" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/work/ansible-awx-kubernetes" vcs="Git" />
+  </component>
+</project>
