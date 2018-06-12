@@ -6,18 +6,18 @@
         <counts>
           <entry key="Dockerfile" value="8" />
           <entry key="LICENSE" value="1" />
-          <entry key="Makefile" value="33" />
+          <entry key="Makefile" value="34" />
           <entry key="am" value="1" />
           <entry key="conf" value="1" />
           <entry key="config" value="1" />
           <entry key="crt" value="1" />
           <entry key="env_make" value="3" />
           <entry key="gitignore" value="2" />
-          <entry key="gitmodules" value="7" />
+          <entry key="gitmodules" value="8" />
           <entry key="in" value="1" />
           <entry key="key" value="2" />
           <entry key="master" value="1" />
-          <entry key="md" value="21" />
+          <entry key="md" value="22" />
           <entry key="mk" value="4" />
           <entry key="ovpn" value="1" />
           <entry key="sql" value="4" />
@@ -29,9 +29,9 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Dockerfile" value="8" />
-          <entry key="Makefile" value="39" />
-          <entry key="Markdown" value="21" />
-          <entry key="PLAIN_TEXT" value="21" />
+          <entry key="Makefile" value="40" />
+          <entry key="Markdown" value="22" />
+          <entry key="PLAIN_TEXT" value="22" />
           <entry key="SQL" value="4" />
           <entry key="YAML" value="109" />
         </counts>

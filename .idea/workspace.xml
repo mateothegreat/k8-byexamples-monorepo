@@ -2,52 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b9a959d-0a08-46f7-80f1-80cf41260137" name="Default Changelist" comment="docs">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/usage.statistics.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manifests/storageclass-fast.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/k8-byexamples-drupal/Dockerfile.1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/k8-byexamples-drupal/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/k8-byexamples-eclipse-che/.gitmodules" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/k8-byexamples-eclipse-che/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/k8-byexamples-eclipse-che/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/k8-byexamples-icinga/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/k8-byexamples-icinga/.gitmodules" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/k8-byexamples-icinga/.make/CONTRIBUTING.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/k8-byexamples-icinga/.make/ISSUE_TEMPLATE.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/k8-byexamples-icinga/.make/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/k8-byexamples-icinga/.make/Makefile.inc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/k8-byexamples-icinga/.make/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/k8-byexamples-icinga/.make/includes/colors.mk" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/k8-byexamples-icinga/.make/includes/docker.mk" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/k8-byexamples-icinga/.make/includes/git.mk" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/k8-byexamples-icinga/.make/includes/help.mk" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/k8-byexamples-icinga/.make/includes/kubectl.mk" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/k8-byexamples-icinga/.make/includes/tls.mk" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/k8-byexamples-icinga/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/k8-byexamples-icinga/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/k8-byexamples-icinga/manifests/server-deployment.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/k8-byexamples-icinga/manifests/server-service.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/k8-byexamples-icinga/manifests/web-deployment.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/k8-byexamples-icinga/manifests/web-service.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.make" beforeDir="false" afterPath="$PROJECT_DIR$/.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manifests/streaming-platform.com-certificate.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/manifests/streaming-platform.com-certificate.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manifests/streaming-platform.com-ingress.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/manifests/streaming-platform.com-ingress.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules.config" beforeDir="false" afterPath="$PROJECT_DIR$/modules.config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/k8-byexamples-cert-manager" beforeDir="false" afterPath="$PROJECT_DIR$/modules/k8-byexamples-cert-manager" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/k8-byexamples-dashboard" beforeDir="false" afterPath="$PROJECT_DIR$/modules/k8-byexamples-dashboard" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/k8-byexamples-echoserver" beforeDir="false" afterPath="$PROJECT_DIR$/modules/k8-byexamples-echoserver" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/k8-byexamples-elasticsearch-cluster" beforeDir="false" afterPath="$PROJECT_DIR$/modules/k8-byexamples-elasticsearch-cluster" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/k8-byexamples-fluentd-collector" beforeDir="false" afterPath="$PROJECT_DIR$/modules/k8-byexamples-fluentd-collector" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/k8-byexamples-gcloud-preemptible-starter" beforeDir="false" afterPath="$PROJECT_DIR$/modules/k8-byexamples-gcloud-preemptible-starter" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/k8-byexamples-gitlab" beforeDir="false" afterPath="$PROJECT_DIR$/modules/k8-byexamples-gitlab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/k8-byexamples-gluu" beforeDir="false" afterPath="$PROJECT_DIR$/modules/k8-byexamples-gluu" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/k8-byexamples-google-ingressing" beforeDir="false" afterPath="$PROJECT_DIR$/modules/k8-byexamples-google-ingressing" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/k8-byexamples-guacamole" beforeDir="false" afterPath="$PROJECT_DIR$/modules/k8-byexamples-guacamole" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/k8-byexamples-haproxy" beforeDir="false" afterPath="$PROJECT_DIR$/modules/k8-byexamples-haproxy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules/k8-byexamples-icinga/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/modules/k8-byexamples-icinga/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/k8-byexamples-influxdb" beforeDir="false" afterPath="$PROJECT_DIR$/modules/k8-byexamples-influxdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules/k8-byexamples-ingress-controller" beforeDir="false" afterPath="$PROJECT_DIR$/modules/k8-byexamples-ingress-controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules/k8-byexamples-ingress-controller/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/modules/k8-byexamples-ingress-controller/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules/k8-byexamples-ingress-controller/manifests/controller-service.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/modules/k8-byexamples-ingress-controller/manifests/controller-service.yaml" afterDir="false" />
@@ -55,20 +11,10 @@
       <change beforePath="$PROJECT_DIR$/modules/k8-byexamples-ingress-controller/manifests/udp-services-configmap.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/modules/k8-byexamples-ingress-controller/manifests/udp-services-configmap.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules/k8-byexamples-ingress-controller/templates/certificate.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/modules/k8-byexamples-ingress-controller/templates/certificate.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules/k8-byexamples-ingress-controller/templates/ingress.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/modules/k8-byexamples-ingress-controller/templates/ingress.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/k8-byexamples-jenkins" beforeDir="false" afterPath="$PROJECT_DIR$/modules/k8-byexamples-jenkins" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules/k8-byexamples-keycloak" beforeDir="false" afterPath="$PROJECT_DIR$/modules/k8-byexamples-keycloak" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/k8-byexamples-keycloak-proxy" beforeDir="false" afterPath="$PROJECT_DIR$/modules/k8-byexamples-keycloak-proxy" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules/k8-byexamples-keycloak/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/modules/k8-byexamples-keycloak/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/k8-byexamples-kibana" beforeDir="false" afterPath="$PROJECT_DIR$/modules/k8-byexamples-kibana" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/k8-byexamples-minio" beforeDir="false" afterPath="$PROJECT_DIR$/modules/k8-byexamples-minio" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/k8-byexamples-monitoring-grafana" beforeDir="false" afterPath="$PROJECT_DIR$/modules/k8-byexamples-monitoring-grafana" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/k8-byexamples-monitoring-metricbeat" beforeDir="false" afterPath="$PROJECT_DIR$/modules/k8-byexamples-monitoring-metricbeat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/k8-byexamples-monitoring-prometheus" beforeDir="false" afterPath="$PROJECT_DIR$/modules/k8-byexamples-monitoring-prometheus" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/k8-byexamples-mysql" beforeDir="false" afterPath="$PROJECT_DIR$/modules/k8-byexamples-mysql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/k8-byexamples-nginx" beforeDir="false" afterPath="$PROJECT_DIR$/modules/k8-byexamples-nginx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules/k8-byexamples-openvpn" beforeDir="false" afterPath="$PROJECT_DIR$/modules/k8-byexamples-openvpn" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules/k8-byexamples-openvpn/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/modules/k8-byexamples-openvpn/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/k8-byexamples-postgresql" beforeDir="false" afterPath="$PROJECT_DIR$/modules/k8-byexamples-postgresql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules/k8-byexamples-rabbitmq-cluster" beforeDir="false" afterPath="$PROJECT_DIR$/modules/k8-byexamples-rabbitmq-cluster" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules/k8-byexamples-rabbitmq-cluster/CODE_OF_CONDUCT.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/modules/k8-byexamples-rabbitmq-cluster/CONTRIBUTING.md" beforeDir="false" />
@@ -76,13 +22,7 @@
       <change beforePath="$PROJECT_DIR$/modules/k8-byexamples-rabbitmq-cluster/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/modules/k8-byexamples-rabbitmq-cluster/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules/k8-byexamples-rabbitmq-cluster/manifests/service.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/modules/k8-byexamples-rabbitmq-cluster/manifests/service.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules/k8-byexamples-rabbitmq-cluster/manifests/statefulset.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/modules/k8-byexamples-rabbitmq-cluster/manifests/statefulset.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/k8-byexamples-redis" beforeDir="false" afterPath="$PROJECT_DIR$/modules/k8-byexamples-redis" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/k8-byexamples-wordpress" beforeDir="false" afterPath="$PROJECT_DIR$/modules/k8-byexamples-wordpress" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/k8-byexamples-zipkin" beforeDir="false" afterPath="$PROJECT_DIR$/modules/k8-byexamples-zipkin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/properties/echoserver.gcp.streaming-platform.com/.make" beforeDir="false" afterPath="$PROJECT_DIR$/properties/echoserver.gcp.streaming-platform.com/.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/properties/platformnvr.com/.make" beforeDir="false" afterPath="$PROJECT_DIR$/properties/platformnvr.com/.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/properties/streaming-platform.com/.make" beforeDir="false" afterPath="$PROJECT_DIR$/properties/streaming-platform.com/.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/properties/streamnvr.com/.make" beforeDir="false" afterPath="$PROJECT_DIR$/properties/streamnvr.com/.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/work/ansible-awx-kubernetes" beforeDir="false" afterPath="$PROJECT_DIR$/work/ansible-awx-kubernetes" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/work/ansible-awx-kubernetes/awx-postgres-pvc.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/work/ansible-awx-kubernetes/awx-postgres-pvc.yaml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -92,7 +32,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.644848">
+    <splitter split-orientation="horizontal" split-proportion="0.77330714">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
@@ -105,99 +45,10 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/modules/k8-byexamples-eclipse-che/manifests/storage-persistentvolume.yaml">
-              <provider selected="true" editor-type-id="text-editor" />
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/modules/k8-byexamples-eclipse-che/manifests/storage-persistentvolumeclaim.yaml">
-              <provider selected="true" editor-type-id="text-editor" />
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/modules/k8-byexamples-eclipse-che/Makefile">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="399">
-                  <caret line="19" column="65" lean-forward="true" selection-start-line="19" selection-start-column="65" selection-end-line="19" selection-end-column="65" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/modules/k8-byexamples-eclipse-che/manifests/deployment.yaml">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="714">
-                  <caret line="190" column="18" lean-forward="true" selection-start-line="190" selection-start-column="18" selection-end-line="190" selection-end-column="18" />
-                  <folding>
-                    <element signature="e#574#692#0" expanded="true" />
-                    <element signature="e#701#819#0" expanded="true" />
-                    <element signature="e#828#944#0" expanded="true" />
-                    <element signature="e#953#1099#0" expanded="true" />
-                    <element signature="e#1108#1242#0" expanded="true" />
-                    <element signature="e#1251#1403#0" expanded="true" />
-                    <element signature="e#1412#1604#0" expanded="true" />
-                    <element signature="e#1613#1813#0" expanded="true" />
-                    <element signature="e#1822#1988#0" expanded="true" />
-                    <element signature="e#1997#2165#0" expanded="true" />
-                    <element signature="e#2174#2342#0" expanded="true" />
-                    <element signature="e#2351#2541#0" expanded="true" />
-                    <element signature="e#2550#2764#0" expanded="true" />
-                    <element signature="e#2773#2979#0" expanded="true" />
-                    <element signature="e#2988#3108#0" expanded="true" />
-                    <element signature="e#3117#3277#0" expanded="true" />
-                    <element signature="e#3286#3454#0" expanded="true" />
-                    <element signature="e#3463#3623#0" expanded="true" />
-                    <element signature="e#3632#3794#0" expanded="true" />
-                    <element signature="e#3803#3941#0" expanded="true" />
-                    <element signature="e#3950#4076#0" expanded="true" />
-                    <element signature="e#4085#4213#0" expanded="true" />
-                    <element signature="e#4222#4350#0" expanded="true" />
-                    <element signature="e#4359#4511#0" expanded="true" />
-                    <element signature="e#4520#4680#0" expanded="true" />
-                    <element signature="e#4689#4869#0" expanded="true" />
-                    <element signature="e#4878#5028#0" expanded="true" />
-                    <element signature="e#5037#5231#0" expanded="true" />
-                    <element signature="e#5240#5364#0" expanded="true" />
-                    <element signature="e#5373#5521#0" expanded="true" />
-                    <element signature="e#5530#5702#0" expanded="true" />
-                    <element signature="e#5711#5887#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/modules/k8-byexamples-monitoring-grafana/Makefile">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="378">
                   <caret line="18" column="36" selection-start-line="18" selection-end-line="19" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/modules/k8-byexamples-openvpn/Makefile">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="663">
-                  <caret line="95" selection-start-line="95" selection-end-line="95" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/modules/k8-byexamples-openvpn/heman.ovpn">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="126">
-                  <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="38" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/modules/k8-byexamples-ingress-controller/Makefile">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="756">
-                  <caret line="36" column="98" selection-start-line="36" selection-start-column="98" selection-end-line="36" selection-end-column="98" />
                 </state>
               </provider>
             </entry>
@@ -230,20 +81,20 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/modules/k8-byexamples-eclipse-che/manifests/configmap.yaml">
+            <entry file="file://$PROJECT_DIR$/Makefile">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="462">
-                  <caret line="22" column="55" lean-forward="true" selection-start-line="22" selection-start-column="55" selection-end-line="22" selection-end-column="55" />
+                <state relative-caret-position="294">
+                  <caret line="14" column="49" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/modules/k8-byexamples-eclipse-che/README.md">
+            <entry file="file://$PROJECT_DIR$/README.md">
               <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
                 <state split_layout="SPLIT">
-                  <first_editor relative-caret-position="357">
-                    <caret line="17" selection-start-line="17" selection-end-line="17" />
+                  <first_editor relative-caret-position="714">
+                    <caret line="55" column="59" selection-start-line="55" selection-start-column="59" selection-end-line="55" selection-end-column="59" />
                   </first_editor>
                   <second_editor />
                 </state>
@@ -251,10 +102,10 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/modules/k8-byexamples-eclipse-che/manifests/serviceaccount.yaml">
+            <entry file="file://$PROJECT_DIR$/.gitmodules">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="168">
-                  <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+                <state relative-caret-position="1092">
+                  <caret line="52" column="45" lean-forward="true" selection-start-line="52" selection-start-column="45" selection-end-line="52" selection-end-column="45" />
                 </state>
               </provider>
             </entry>
@@ -263,7 +114,7 @@
             <entry file="file://$PROJECT_DIR$/modules/k8-byexamples-ingress-controller/manifests/rbac-01-serviceaccount.yaml">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="84">
-                  <caret line="4" column="16" lean-forward="true" selection-start-line="4" selection-end-line="5" />
+                  <caret line="4" column="16" selection-start-line="4" selection-end-line="5" />
                 </state>
               </provider>
             </entry>
@@ -291,15 +142,6 @@
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="336">
                   <caret line="16" selection-start-line="16" selection-end-line="16" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/modules/k8-byexamples-eclipse-che/manifests/service.yaml">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="294">
-                  <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
                 </state>
               </provider>
             </entry>
@@ -339,7 +181,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/modules.config" />
         <option value="$PROJECT_DIR$/modules/k8-byexamples-monitoring-grafana/manifests/persistentvolumeclaim.yaml" />
         <option value="$PROJECT_DIR$/modules/k8-byexamples-elasticsearch-cluster/manifests/es-master.yaml" />
         <option value="$PROJECT_DIR$/modules/k8-byexamples-elasticsearch-cluster/.gitmodules" />
@@ -390,6 +231,7 @@
         <option value="$PROJECT_DIR$/modules/k8-byexamples-eclipse-che/manifests/service.yaml" />
         <option value="$PROJECT_DIR$/modules/k8-byexamples-eclipse-che/manifests/configmap.yaml" />
         <option value="$PROJECT_DIR$/modules/k8-byexamples-eclipse-che/README.md" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -1068,51 +910,6 @@
               <item name="k8-byexamples-monorepo" type="462c0819:PsiDirectoryNode" />
               <item name="modules" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="k8-byexamples-monorepo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="k8-byexamples-monorepo" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="k8-byexamples-echoserver" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="k8-byexamples-monorepo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="k8-byexamples-monorepo" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="k8-byexamples-eclipse-che" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="k8-byexamples-monorepo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="k8-byexamples-monorepo" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="k8-byexamples-eclipse-che" type="462c0819:PsiDirectoryNode" />
-              <item name="manifests" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="k8-byexamples-monorepo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="k8-byexamples-monorepo" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="k8-byexamples-monitoring-grafana" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="k8-byexamples-monorepo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="k8-byexamples-monorepo" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="k8-byexamples-monitoring-grafana" type="462c0819:PsiDirectoryNode" />
-              <item name="manifests" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="k8-byexamples-monorepo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="k8-byexamples-monorepo" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="k8-byexamples-openvpn" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="k8-byexamples-monorepo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="k8-byexamples-monorepo" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="k8-byexamples-openvpn" type="462c0819:PsiDirectoryNode" />
-              <item name="openvpn" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -1176,10 +973,10 @@
     </configuration>
   </component>
   <component name="ToolWindowManager">
-    <frame x="276" y="51" width="2875" height="2073" extended-state="0" />
+    <frame x="276" y="51" width="3564" height="2073" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16058135" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12905984" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -1211,27 +1008,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/modules/k8-byexamples-icinga/docker-icinga2/Makefile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/k8-byexamples-icinga/docker-icinga2/icinga2-master/env_make">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/k8-byexamples-icinga/docker-icinga2/icinga2-master/Dockerfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1041">
-          <caret line="86" column="22" lean-forward="true" selection-start-line="86" selection-start-column="22" selection-end-line="86" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/modules/k8-byexamples-icinga/manifests/web-service.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -1496,7 +1272,7 @@
     <entry file="file://$PROJECT_DIR$/modules/k8-byexamples-ingress-controller/manifests/rbac-01-serviceaccount.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
-          <caret line="4" column="16" lean-forward="true" selection-start-line="4" selection-end-line="5" />
+          <caret line="4" column="16" selection-start-line="4" selection-end-line="5" />
         </state>
       </provider>
     </entry>
@@ -1599,8 +1375,32 @@
     <entry file="file://$PROJECT_DIR$/modules/k8-byexamples-eclipse-che/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="357">
-            <caret line="17" selection-start-line="17" selection-end-line="17" />
+          <first_editor relative-caret-position="588">
+            <caret line="28" column="3" lean-forward="true" selection-start-line="28" selection-start-column="3" selection-end-line="28" selection-end-column="3" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Makefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="14" column="49" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitmodules">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1092">
+          <caret line="52" column="45" lean-forward="true" selection-start-line="52" selection-start-column="45" selection-end-line="52" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="714">
+            <caret line="55" column="59" selection-start-line="55" selection-start-column="59" selection-end-line="55" selection-end-column="59" />
           </first_editor>
           <second_editor />
         </state>
